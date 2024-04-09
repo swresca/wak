@@ -10,21 +10,21 @@ void errorCallback(int error, const char* description)
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 {
     if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS)
-        glClearColor(1.0f, 0.0f, 0.0f, 1.0f); // 빨간색
+        glClearColor(1.0f, 0.0f, 0.0f, 1.0f); 
     else if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_RELEASE)
-        glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // 검정색
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f); 
     else if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
-        glClearColor(0.0f, 1.0f, 0.0f, 1.0f); // 녹색
+        glClearColor(0.0f, 1.0f, 0.0f, 1.0f); 
     else if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_RELEASE)
-        glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // 검정색
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f); 
 }
 
 void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
 {
     if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS)
-        glClearColor(0.0f, 0.0f, 1.0f, 1.0f); // 파랑색
+        glClearColor(0.0f, 0.0f, 1.0f, 1.0f); 
     else if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
-        glClearColor(1.0f, 0.0f, 1.0f, 1.0f); // 마젠타색
+        glClearColor(1.0f, 0.0f, 1.0f, 1.0f); 
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -58,10 +58,10 @@ int main(void)
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
-        // 마우스를 먹게 만들어 준당 개꿀
+        
         glfwPollEvents();
 
-        // 버퍼를 초기화 시킨다.
+        
         glClear(GL_COLOR_BUFFER_BIT);
 
         /* Swap front and back buffers */
